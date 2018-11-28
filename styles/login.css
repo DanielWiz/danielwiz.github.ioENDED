@@ -1,0 +1,47 @@
+.loginBox {	
+margin-top: 80px;
+margin-bottom: 80px;
+}
+
+.logeo {
+  max-width: 350px;
+  padding: 15px 35px 45px;
+  background-color: #f1c550;
+  border: 2px solid rgba(0,0,0,0.1);
+  margin: auto;
+  width: 50%;
+  float: left;
+  border-left:1em solid transparent;
+  border-right:1em solid transparent;
+  padding: 2%;
+  border: 5px solid #a1c45a;
+  margin-left: 37%;
+  border-radius: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}  
+
+
+.btn-login {
+
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+
+}
+
+@media screen and (max-width: 600px) {
+    .logeo {
+        background-color: #f1c550;
+        width: 50%;
+        float: left;
+        padding: 2%;
+        border: 5px solid #a1c45a;
+        margin-left: 2%;
+        border-radius: 25px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }  
+}

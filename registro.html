@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/carusel.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link rel="stylesheet" href="styles/tablas.css">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+      <div id="body">
+          <body>
+              <nav>
+                  <div class="topnav" id="myTopnav">
+                      <div class=logo>
+                          <a><img src="img/logo.png"alt="logo pagina"></a>
+                      </div>
+                          <a href="/" class="active">Inicio</a>
+                          <a href="./login.html">Login</a>
+                          <a href="./registro.html">Registro</a>
+                          <a href="./adopcion.html">Galeria</a>
+                          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                          </a>
+                      <div class="NombreUser">
+                              <div class="deslogeo">
+                              </div>
+                              <div class="usuario">     
+                              </div>
+                      </div>
+                  </div>               
+              </nav>
+
+<div class="containerRegistro">
+        <h2>Registro</h2>
+        <form method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <p>
+              {{ field.label_tag }}<br>
+              {{ field }}
+            </p>
+          {% endfor %}
+          <button class="btn btn-success"" type="submit">Registrarse</button>
+      </form>
+</div>
+</body>
+</html>

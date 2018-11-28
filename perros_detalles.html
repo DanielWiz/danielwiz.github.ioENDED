@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/carusel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/menu.css">
+	<link rel="stylesheet" href="styles/tablas.css">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="body">
+            <body>
+                <nav>
+                    <div class="topnav" id="myTopnav">
+                        <div class=logo>
+                            <a><img src="img/logo.png"alt="logo pagina"></a>
+                        </div>
+                            <a href="/" class="active">Inicio</a>
+                            <a href="./login.html">Login</a>
+                            <a href="./registro.html">Registro</a>
+                            <a href="./adopcion.html">Galeria</a>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                            <i class="fa fa-bars"></i>
+                            </a>
+                        <div class="NombreUser">
+                                <div class="deslogeo">
+                                </div>
+                                <div class="usuario">     
+                                </div>
+                        </div>
+                    </div>               
+                </nav>
+	<div class="box">
+		<div class="imagenPerro">
+			<img src="{{ perros.Fotografia.url }}">
+		</div>
+		<div class="CuadroTexto">
+			<div class="NombrePerro">
+				<h1>{{ perros.NombrePerro }}</h1>
+			</div>
+			<div class="Raza">
+				<h2>Raza: {{ perros.RazaPredominante }}</h2>
+			</div>
+			<div class="Descripcion">
+				<p>{{ perros.Descripcion }}</p>
+			</div>
+			<div class="EstadoPerro">
+					<h3>Estado: {% if perros.Estado == "R" %}
+					Rescatado
+				{% endif %}</h3>
+				<h3>{% if perros.Estado == "A" %}
+					Adoptado
+				{% endif %}</h3>
+				<h3>{% if perros.Estado == "D" %}
+					Disponible
+				{% endif %}</h3>
+			</div>
+			{% if perros.Estado == "R" %}
+			<button class="btn btn-success disabled" type="submit">Adoptar</button>
+            {% endif %}
+			
+			{% if perros.Estado == "A" %}
+			<button class="btn btn-success disabled" type="submit">Adoptar</button>
+            {% endif %}
+			
+			{% if perros.Estado == "D" %}
+			<button class="btn btn-success" type="submit">Adoptar</button>
+            {% endif %}
+		</div>
+
+	</div>
+  </body>
+</html>

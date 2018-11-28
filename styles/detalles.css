@@ -1,0 +1,36 @@
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.imagenPerro{
+    margin-top: 1%;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    height: 20%;
+} 
+.CuadroTexto {
+    margin-left: 1%;
+}
+
+.NombrePerro{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+    color: cadetblue;
+}
+
+.Raza {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px; 
+}
+
+.Descripcion{
+    height: 20%;
+    font-size: 20px;
+}
+
